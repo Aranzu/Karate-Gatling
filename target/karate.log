@@ -1,0 +1,31 @@
+08:42:53.134 [main] INFO  io.gatling.compiler.ZincCompiler$ - compiling 8 Scala sources to C:\Users\Aranzu\Mi unidad\IntelliJProject\KarateGatling2\target\test-classes ...
+08:42:55.132 [main] INFO  io.gatling.compiler.ZincCompiler$ - done compiling
+08:42:55.883 [main] INFO  i.g.c.config.GatlingConfiguration$ - Gatling will try to load 'gatling.conf' config file as ClassLoader resource.
+08:42:56.214 [GatlingSystem-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+08:42:56.644 [main] ERROR io.gatling.app.Gatling$ - Run crashed
+java.lang.IllegalArgumentException: requirement failed: setUp can only be called once
+	at scala.Predef$.require(Predef.scala:337)
+	at io.gatling.core.scenario.Simulation.setUp(Simulation.scala:125)
+	at io.gatling.core.scenario.Simulation.setUp(Simulation.scala:122)
+	at testAPI.postUsersCSV.<init>(postUsersCSV.scala:30)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:166)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:404)
+	at java.base/java.lang.Class.newInstance(Class.java:590)
+	at io.gatling.app.SimulationClass$Scala.params(SimulationClass.scala:31)
+	at io.gatling.app.Runner.run0(Runner.scala:62)
+	at io.gatling.app.Runner.run(Runner.scala:49)
+	at io.gatling.app.Gatling$.start(Gatling.scala:87)
+	at io.gatling.app.Gatling$.fromArgs(Gatling.scala:49)
+	at io.gatling.app.Gatling$.main(Gatling.scala:38)
+	at io.gatling.app.Gatling.main(Gatling.scala)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at io.gatling.mojo.MainWithArgsInFile.runMain(MainWithArgsInFile.java:53)
+	at io.gatling.mojo.MainWithArgsInFile.main(MainWithArgsInFile.java:34)
+08:42:56.669 [GatlingSystem-akka.actor.default-dispatcher-5] INFO  akka.actor.CoordinatedShutdown - Running CoordinatedShutdown with reason [ActorSystemTerminateReason]
